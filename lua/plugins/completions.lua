@@ -4,6 +4,10 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      "luckasRanarison/tailwind-tools.nvim",
+      "onsails/lspkind-nvim",
+    },
     config = function()
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
@@ -39,6 +43,7 @@ return {
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
+      "luckasRanarison/tailwind-tools.nvim",
     },
   },
 }

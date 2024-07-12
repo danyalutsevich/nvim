@@ -19,11 +19,11 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
-        capabilities = capabilities,
+				capabilities = capabilities,
 				settings = {
 					Lua = {
 						diagnostics = {
@@ -34,8 +34,12 @@ return {
 			})
 
 			lspconfig.tsserver.setup({
-        capabilities = capabilities,
-      })
+				capabilities = capabilities,
+			})
+
+			lspconfig.tailwindcss.setup({
+				capabilities = capabilities,
+			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, {})
