@@ -11,10 +11,22 @@ return {
 				sorter = "case_sensitive",
 			},
 			view = {
-				width = 30,
+				width = 35,
+			},
+      diagnostics = {
+        enable = true,
+        show_on_dirs = true,
+      },
+			modified = {
+				enable = true,
 			},
 			renderer = {
 				group_empty = true,
+				icons = {
+					show = {
+						modified = true,
+					},
+				},
 			},
 			filters = {
 				dotfiles = true,

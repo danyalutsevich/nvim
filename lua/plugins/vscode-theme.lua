@@ -38,6 +38,5 @@ return {
 				after = function(conf, colors, utils) end,
 			},
 		})
-		vim.cmd([[colorscheme visual_studio_code]])
 	end,
 }
