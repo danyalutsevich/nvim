@@ -34,5 +34,3 @@ require("lazy").setup({
 	checker = { enabled = true, notify = false },
 })
 
--- vim.cmd.colorscheme "catppuccin"
-vim.cmd.colorscheme("visual_studio_code")
