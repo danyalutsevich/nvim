@@ -13,10 +13,10 @@ return {
 			view = {
 				width = 35,
 			},
-      diagnostics = {
-        enable = true,
-        show_on_dirs = true,
-      },
+			diagnostics = {
+				enable = true,
+				show_on_dirs = true,
+			},
 			modified = {
 				enable = true,
 			},
@@ -28,8 +28,13 @@ return {
 					},
 				},
 			},
+			update_focused_file = {
+				enable = true,
+			},
+			git = { enable = true },
 			filters = {
 				dotfiles = false,
+				git_ignored = false,
 			},
 		})
 		vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", {})
