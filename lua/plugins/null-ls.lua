@@ -20,7 +20,7 @@ return {
     end
 
     -- tprint({"a", "b", "c",v={"f"}})
-    -- tprint(require("null-ls"))
+    -- Tprint(null_ls.builtins.formatting)
     null_ls.setup({
       sources = {
         null_ls.builtins.formatting.stylua,
