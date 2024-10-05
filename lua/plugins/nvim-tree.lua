@@ -21,7 +21,7 @@ return {
 				enable = true,
 			},
 			renderer = {
-				group_empty = true,
+				group_empty = false,
 				icons = {
 					show = {
 						modified = true,
