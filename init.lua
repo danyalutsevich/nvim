@@ -1,4 +1,5 @@
 vim.opt.termguicolors = true
+vim.opt.showmode = false
 require("config.lazy")
 
 vim.cmd("set expandtab")
@@ -10,6 +11,7 @@ vim.cmd("set relativenumber")
 vim.cmd("set clipboard=unnamed")
 vim.cmd([[colorscheme vscode]])
 
+vim.keymap.set("n", "<leader>f", ":lua vim.diagnostic.open_float()<CR>")
 -- vim.keymap.set('n','<c-k>',':wincmd k<CR>')
 -- vim.keymap.set('n','<c-j>',':wincmd j<CR>')
 -- vim.keymap.set('n','<c-h>',':wincmd h<CR>')

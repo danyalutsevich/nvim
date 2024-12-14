@@ -61,6 +61,10 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+			})
+
 			-- lspconfig.emmet_ls.setup({
 			--   capabilities = capabilities,
 			-- })
