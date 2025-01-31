@@ -65,6 +65,10 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.terraformls.setup({
+				capabilities = capabilities,
+			})
+
 			-- lspconfig.emmet_ls.setup({
 			--   capabilities = capabilities,
 			-- })
