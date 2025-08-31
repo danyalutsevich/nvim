@@ -10,9 +10,7 @@ return {
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = {},
 				globalstatus = true,
-				refresh = {
-					statusline = 100,
-				},
+				refresh = { statusline = 100 },
 			},
 		})
 	end,

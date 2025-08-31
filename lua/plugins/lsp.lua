@@ -18,6 +18,20 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			{
+				"williamboman/mason.nvim",
+				commit = "41e75af1f578e55ba050c863587cffde3556ffa6",
+			},
+			{
+				"williamboman/mason-lspconfig.nvim",
+				commit = "a8f5e511c686b6e8eec7bc57caf4d9d710005bcf",
+			},
+			{
+				"hrsh7th/cmp-nvim-lsp",
+				commit = "0e6b2ed705ddcff9738ec4ea838141654f12eeef", -- this fixes your "cmp_nvim_lsp not found"
+			},
+		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -66,6 +80,14 @@ return {
 			})
 
 			lspconfig.terraformls.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.cmake.setup({
 				capabilities = capabilities,
 			})
 
