@@ -3,6 +3,13 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
+vim.o.signcolumn = "yes"
+vim.o.winborder = "rounded"
+
+-- Disable swapfile
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undofile = true
 
 -- UI
 vim.opt.termguicolors = true
@@ -13,11 +20,12 @@ vim.opt.clipboard = "unnamed"
 
 -- Misc
 vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 1200
 
 -- Better search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.incsearch = true
 
 -- Better splitting
 vim.opt.splitbelow = true

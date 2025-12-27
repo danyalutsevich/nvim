@@ -24,5 +24,11 @@ return {
 		})
 
 		vim.keymap.set("n", "<C-F>", vim.lsp.buf.format, {})
+
+		vim.api.nvim_create_user_command("Wf", "noautocmd write", {})
+
+		vim.keymap.set("n", "<leader>wf", ":noautocmd write<CR>", {
+			desc = "Save without formatting",
+		})
 	end,
 }
