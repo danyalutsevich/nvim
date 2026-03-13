@@ -20,7 +20,7 @@ vim.opt.clipboard = "unnamed"
 
 -- Misc
 vim.opt.updatetime = 250
-vim.opt.timeoutlen = 1200
+vim.opt.timeoutlen = 300
 
 -- Better search
 vim.opt.ignorecase = true
@@ -32,6 +32,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.keymap.set("n", "<leader>f", ":lua vim.diagnostic.open_float()<CR>")
+vim.keymap.set("n", "tt", ":TailwindFoldToggle<CR>")
 
 -- Plugin management
 require("config.lazy")

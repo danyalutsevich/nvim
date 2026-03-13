@@ -14,10 +14,12 @@ return {
 					"lua_ls",
 					"ts_ls",
 					"tailwindcss",
+					"stylelint_lsp",
 					"dockerls",
 					"docker_compose_language_service",
 					"html",
 					"cssls",
+					"eslint",
 					"rust_analyzer",
 					"terraformls",
 					"clangd",
@@ -55,6 +57,7 @@ return {
 
 			vim.lsp.config("ts_ls", { capabilities = capabilities })
 			vim.lsp.config("tailwindcss", { capabilities = capabilities })
+			vim.lsp.config("stylelint_lsp", { capabilities = capabilities })
 			vim.lsp.config("dockerls", { capabilities = capabilities })
 			vim.lsp.config("docker_compose_language_service", { capabilities = capabilities })
 			vim.lsp.config("html", { capabilities = capabilities })
@@ -63,6 +66,7 @@ return {
 			vim.lsp.config("terraformls", { capabilities = capabilities })
 			vim.lsp.config("clangd", { capabilities = capabilities })
 			vim.lsp.config("cmake", { capabilities = capabilities })
+			vim.lsp.config("eslint", { capabilities = capabilities })
 
 			-- =====================
 			-- ENABLE SERVERS
@@ -72,10 +76,12 @@ return {
 				"lua_ls",
 				"ts_ls",
 				"tailwindcss",
+				"stylelint_lsp",
 				"dockerls",
 				"docker_compose_language_service",
 				"html",
 				"cssls",
+				"eslint",
 				"rust_analyzer",
 				"terraformls",
 				"clangd",
