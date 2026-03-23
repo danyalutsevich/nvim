@@ -21,6 +21,7 @@ vim.opt.clipboard = "unnamed"
 -- Misc
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
+vim.opt.autoread = false
 
 -- Better search
 vim.opt.ignorecase = true
@@ -33,6 +34,18 @@ vim.opt.splitright = true
 
 vim.keymap.set("n", "<leader>f", ":lua vim.diagnostic.open_float()<CR>")
 vim.keymap.set("n", "tt", ":TailwindFoldToggle<CR>")
+
+-- Prompt to reload buffers changed outside Neovim.
+-- Running :checktime on focus/enter keeps detection automatic without requiring :e.
+local external_change_group = vim.api.nvim_create_augroup("ExternalFileChanges", { clear = true })
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  group = external_change_group,
+  callback = function()
+    if vim.fn.mode() ~= "c" then
+      vim.cmd("checktime")
+    end
+  end,
+})
 
 -- Plugin management
 require("config.lazy")
